@@ -5,8 +5,8 @@ A fault-tolerant distributed key-value store built from scratch in Java, using t
 
 ## Status
 - [x] In-memory key-value store
-- [ ] HTTP API
-- [ ] Write-ahead log (disk persistence)
+- [x] HTTP API
+- [x] Write-ahead log (disk persistence)
 - [ ] Multi-node cluster
 - [ ] Leader election
 - [ ] Log replication
