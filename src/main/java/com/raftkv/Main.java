@@ -1,12 +1,11 @@
 package com.raftkv;
 
 public class Main {
-    public static void main(String[] args) {
-        KVStore store = new KVStore();
-        store.put("name", "Mapla");
-        System.out.println(store.get("name"));
+    public static void main(String[] args) throws Exception {
+        int port = args.length > 0 ? Integer.parseInt(args[0]) : 8081;
 
-        store.delete("name");
-        System.out.println(store.get("name"));
+        KVStore store = new KVStore();
+        KVHttpServer server = new KVHttpServer(store, port);
+        server.start();
     }
 }
